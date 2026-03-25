@@ -3,10 +3,9 @@
 A desktop application built in C# for batch converting CAD files (DWG/DXF) into PDF format through a simple and intuitive interface.
 
 ## ✨ Overview
+This project was developed as a technical assignment to demonstrate file handling, UI design, and batch processing.
 
-This project was developed as a technical assignment to demonstrate file handling, UI design, and integration with external tools in a real-world scenario.
-
-The application allows users to import a folder containing CAD files, preview them, and convert them into PDF documents in a single operation.
+Due to development in a Linux environment, the application was implemented in Java instead of C#, while preserving the requested functionality and overall design.
 
 ---
 
@@ -23,8 +22,8 @@ The application allows users to import a folder containing CAD files, preview th
 
 ## 🖥️ Tech Stack
 
-* C#
-* WinForms (.NET)
+* Java
+* JavaFX
 * File System APIs
 
 ---
@@ -41,12 +40,11 @@ The application allows users to import a folder containing CAD files, preview th
 
 ## 🔧 Conversion Approach
 
-PDF conversion is performed through integration with progeCAD (or simulated when direct automation is not available).
+PDF conversion is designed to integrate with progeCAD or external tools when available.
 
-The focus of this project is on:
-
+In this version, the focus is on:
 * batch processing logic
-* system design
+* application structure
 * user interaction
 
 ---
@@ -71,10 +69,11 @@ Batch conversion of technical drawings into PDF format for documentation, sharin
 
 ## 🧠 Design Considerations
 
+## 🧠 Design Considerations
+* Cross-platform compatibility (Linux-based development)
 * Separation between UI and processing logic
-* Scalability for handling large file sets
-* Basic error handling to prevent crashes
-* Clear and minimal user workflow
+* Scalable structure for batch file handling
+* Minimal and intuitive user workflow
 
 ---
 
@@ -85,3 +84,8 @@ Batch conversion of technical drawings into PDF format for documentation, sharin
 * Advanced error logging
 * Support for additional formats
 * Direct integration with CAD APIs
+
+---
+
+## 📎 Notes
+The project replicates the requested behavior and workflow of the original C# assignment, adapting the implementation to a Java-based environment.
