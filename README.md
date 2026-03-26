@@ -1,91 +1,118 @@
 # DWG-to-PDF-Converter
 
-A desktop application built in C# for batch converting CAD files (DWG/DXF) into PDF format through a simple and intuitive interface.
+## 📌 Description
 
-## ✨ Overview
-This project was developed as a technical assignment to demonstrate file handling, UI design, and batch processing.
+Desktop application developed in Java (Swing) that allows users to select a folder containing `.dwg` files and convert them into `.pdf` format.
 
-Due to development in a Linux environment, the application was implemented in Java instead of C#, while preserving the requested functionality and overall design.
+The goal of this project is to demonstrate:
 
----
-
-## 🚀 Features
-
-* 📂 Import a single folder from the file system
-* 📄 Display and preview CAD file list (DWG/DXF)
-* 🔁 Batch conversion to PDF
-* 📁 Automatic creation of `/pdf` output directory
-* 🧭 Simple and user-friendly interface
-* ❌ Cancel operation support
+* desktop GUI development
+* file system handling
+* separation between UI and business logic
+* clean and modular project structure
 
 ---
 
-## 🖥️ Tech Stack
+## ⚙️ Features
 
-* Java
-* JavaFX
-* File System APIs
-
----
-
-## ⚙️ How It Works
-
-1. Click **Import Folder**
-2. Select a directory containing CAD files
-3. The application scans and lists supported files
-4. Click **Convert**
-5. Output PDFs are generated inside a `/pdf` subfolder
+* 📁 Select a folder from the file system
+* 📄 Display `.dwg` files inside the selected folder
+* 🔄 Convert `.dwg` files to `.pdf`
+* 📂 Automatic creation of a `pdf` subfolder
+* ❌ Reset application state via "Cancel" button
 
 ---
 
-## 🔧 Conversion Approach
+## 🏗️ Project Structure
 
-PDF conversion is designed to integrate with progeCAD or external tools when available.
+```
+src/
+ ├── Main.java                // Application entry point
+ ├── ui/
+ │    └── MainFrame.java     // Swing UI
+ ├── service/
+ │    └── ConversionService.java // Conversion logic
+ └── model/
+      └── DwgFile.java       // Data model (optional)
+```
 
-In this version, the focus is on:
-* batch processing logic
-* application structure
-* user interaction
+### 🔹 Design Choices
 
----
-
-## 🧪 Example Use Case
-
-Batch conversion of technical drawings into PDF format for documentation, sharing, or archiving.
-
----
-
-## 📌 Project Status
-
-🟡 Work in progress — actively being developed and improved.
+* Clear separation between **UI and logic** (single responsibility principle)
+* Modular structure for maintainability and scalability
+* Readable and well-commented code
 
 ---
 
-## 📷 Screenshots
+## 🚀 How to Run
 
-*(to be added)*
+1. Open the project in IntelliJ IDEA
+2. Run `Main.java`
+3. Use the interface:
 
----
-
-## 🧠 Design Considerations
-
-## 🧠 Design Considerations
-* Cross-platform compatibility (Linux-based development)
-* Separation between UI and processing logic
-* Scalable structure for batch file handling
-* Minimal and intuitive user workflow
+   * Select a folder containing `.dwg` files
+   * Preview detected files
+   * Click "Convert to PDF"
 
 ---
 
-## 🔮 Future Improvements
+## 🧪 Testing
 
-* Progress bar during conversion
+Manual testing covered:
+
+* ✅ Folder selection
+* ✅ `.dwg` file detection
+* ✅ `pdf` folder creation
+* ✅ PDF file generation
+* ✅ Application reset
+
+---
+
+## ⚠️ Note on DWG → PDF Conversion
+
+Real DWG to PDF conversion is **not fully implemented**.
+
+Currently:
+
+* conversion is simulated
+* or a basic PDF is generated (if a library like PDFBox is integrated)
+
+### 🔧 For real conversion
+
+A dedicated external library would be required, such as:
+
+* Teigha / Open Design Alliance
+* Aspose.CAD
+* Other CAD-specific SDKs
+
+The project architecture is designed to easily integrate such tools.
+
+---
+
+## 💡 Possible Improvements
+
+* Real DWG preview
 * Drag & drop folder support
-* Advanced error logging
-* Support for additional formats
-* Direct integration with CAD APIs
+* Conversion progress bar
+* Advanced logging
+* Multi-folder support
+* Integration with a real CAD library
 
 ---
 
-## 📎 Notes
-The project replicates the requested behavior and workflow of the original C# assignment, adapting the implementation to a Java-based environment.
+## 🧠 Notes
+
+This project was developed with focus on:
+
+* simplicity and clarity
+* clean code practices
+* extensibility for real-world use cases
+
+---
+
+## 👨‍💻 Author
+
+Developed as a technical exercise.
+
+---
+
