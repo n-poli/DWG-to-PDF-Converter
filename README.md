@@ -107,12 +107,3 @@ This project was developed with focus on:
 * simplicity and clarity
 * clean code practices
 * extensibility for real-world use cases
-
----
-
-## 👨‍💻 Author
-
-Developed as a technical exercise.
-
----
-
